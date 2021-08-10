@@ -62,7 +62,7 @@ function LoginPage(props) {
                             </div>
                             <div className="form-group">
                                 <label for="password" className="text-info">Password:</label>
-                                <input type="text" {...userpassword} name="username" className="form-control" autoComplete="new-password"></input>
+                                <input type="password" {...userpassword} name="username" className="form-control" autoComplete="new-password"></input>
                             </div>
                             <div className="form-group">
                                 <label for="remember-me" className="text-info"><span>Remember Me</span><input id="remember-me" name="remember-me" type="checkbox"></input></label>
