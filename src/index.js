@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app';
+import jwt_decode from 'jwt-decode';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {
     BrowserRouter as Router,
