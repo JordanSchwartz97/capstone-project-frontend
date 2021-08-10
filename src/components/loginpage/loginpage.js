@@ -70,7 +70,7 @@ function LoginPage(props) {
                                 <input type="button" className="leftButton" value={loading ? 'Loading...' : 'Login'} onClick={ login} disabled={loading} /> 
                             </div>
                             <div id="register-link" className="text-right">
-                                <a href="#" className="text-info">Register Here</a>
+                                <a href="/register" className="text-info">Register Here</a>
                             </div>
                         </div>
                     </div>

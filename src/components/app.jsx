@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import LoginPage from './loginpage/loginpage';
+import RegisterPage from './registerpage/registerpage'
 import {Switch, Route,Redirect} from 'react-router-dom';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
@@ -41,6 +42,7 @@ import jwt_decode from 'jwt-decode';
          <div className="body">
             <Switch>
                 <Route path = "/" exact component ={LoginPage} />
+                <Route path = "/register" component ={RegisterPage}/>
             </Switch>
         
          </div>
