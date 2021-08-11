@@ -1,0 +1,15 @@
+.card{
+   position: relative;
+   max-height: 300px;
+}
+.card-img-top{
+    position: relative;
+    max-height: 1000px;
+}
+.h5{
+    color: red
+}
+.home-div{
+    max-height: 100%;
+    max-width: 100%;
+}

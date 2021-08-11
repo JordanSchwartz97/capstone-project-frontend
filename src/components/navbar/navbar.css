@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #00ABE7;
+}
+.nav-logout{
+    position: relative;
+    text-align: right;
+}
+.logo{
+    max-width:60px;
+    max-height: 60px;
+
+}
+.body{
+    
+    max-height: 100%;
+    max-width: 100%;
+}
+.nav-bar-right{
+    position:relative;
+    margin: 20px;
+    left:2050px;
+}

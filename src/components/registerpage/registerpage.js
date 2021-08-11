@@ -10,7 +10,6 @@ const username = useFormInput('');
 const userpassword = useFormInput('');
 const [error, setError] = useState(null);
 const [loading, setLoading] = useState(false)
-const [Auth, setAuth] = useState(false);
 const [token, setToken] = useState(null);
 
 const register = async() => {
@@ -29,56 +28,47 @@ const register = async() => {
     const tokenFromStorage = localStorage.getItem('token');
     setToken(tokenFromStorage);
 
-    if(token != null){
-        console.log('token is not null', token)
-        setAuth(true);
-    }
+    if (tokenFromStorage ){
+        console.log("history push")
+        props.history.push('/home');
+
+        }
+        else {
+            console.log("failed")
+            props.history.push('/login');
+        }
 }
-    useEffect(() => {
-     
-        console.log("useEffect")
-      
-        
-        if (token ){
-            console.log("history push")
-            props.history.push('/home');
-            }
-            else {
-                console.log("failed")
-               //alert("failed login! try again")
-                props.history.push('/register');
-            }
-      }, [token]);
+   
     return(
         <div id="login">
-            <h3 className="text-center text-white pt-5">Login Form</h3>
+            <h3 className="text-center pt-5">Tech-x Login Form</h3>
             <div className="container">
                 <div id="login-row" className="row justify-content-center align-items-center">
                     <div id="login-column" className="col-md-6">
                         <div id="login-form" className="form" action="" method="post">
-                            <h3 className="text-center text-info">Register</h3>
+                            <h3 className="text-center text">Register</h3>
                             <div className="form-group">
-                                <label for="first-name" className="text-info">First Name:</label>
+                                <label for="first-name" className="text">First Name:</label>
                                 <input type="text" {...userfirstName} name="first-name" className="form-control" autoComplete="new-first-name"></input>
                             </div>
                             <div className="form-group">
-                                <label for="last-name" className="text-info">Last Name:</label>
+                                <label for="last-name" className="text">Last Name:</label>
                                 <input type="text" {...userlastName} name="last-name" className="form-control" autoComplete="new-last-name"></input>
                             </div>
                             <div className="form-group">
-                                <label for="email" className="text-info">Email:</label>
+                                <label for="email" className="text">Email:</label>
                                 <input type="text" {...useremail} name="email" className="form-control" autoComplete="new-email"></input>
                             </div>
                             <div className="form-group">
-                                <label for="age" className="text-info">Age:</label>
+                                <label for="age" className="text">Age:</label>
                                 <input type="text" {...userage} name="age" className="form-control" autoComplete="new-age"></input>
                             </div>
                             <div className="form-group">
-                                <label for="username" className="text-info">Username:</label>
+                                <label for="username" className="text">Username:</label>
                                 <input type="text"{...username} name="username" className="form-control" autoComplete="new-username"></input>
                             </div>
                             <div className="form-group">
-                                <label for="password" className="text-info">Password:</label>
+                                <label for="password" className="text">Password:</label>
                                 <input type="password" {...userpassword} name="age" className="form-control" autoComplete="new-password"></input>
                             </div>
 
