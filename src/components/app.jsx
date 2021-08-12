@@ -6,13 +6,13 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import Navbar from './navbar/navbar';
 import aboutPage from './aboutpage/aboutPage';
-import productsPage from './allproducts/productsPage';
+import ProductsPage from './allproducts/productsPage';
 import Homepage from './homepage/homepage';
 import ProfilePage from './profile/profilePage';
  const AppHooks = () => {
 
     let [user, setUser] = useState({});
-    
+    let [products, setProducts] = useState([]);
 
     const jwt = localStorage.getItem('token');
     console.log(jwt)
@@ -35,10 +35,21 @@ import ProfilePage from './profile/profilePage';
            console.log(value.data)
            })
        }
+
+       const getProducts = async () => {
+           await axios.get(`http://localhost:5000/api/collections/products`)
+           .then((value) => {
+            setProducts(value.data)
+            console.log(value.data, 'this is products')
+           })
+       }
        useEffect(() => {
           getUserData()
-          console.log(user,'this is use effect')
+          getProducts()
+          console.log(products,'this is use effect')
        }, [])
+
+
    
 
    
@@ -49,12 +60,9 @@ import ProfilePage from './profile/profilePage';
                 <Route path = "/" exact component ={LoginPage} />
                 <Route path = "/register" component ={RegisterPage}/>
                 <Route path = "/home" component= {Homepage}/>
-                <Route path ="/products" component= {productsPage}/>
+                <Route path ="/products" render={(props) => <ProductsPage {...props} user={user} products ={products}/>}/>
                 <Route path ="/about" component={aboutPage}/>
-                <Route 
-                path ="/profile" 
-                render={(props) => <ProfilePage {...props} user={user}/>
-                }/>    
+                <Route path ="/profile" render={(props) => <ProfilePage {...props} user={user}/>}/>    
                
                 
                 <Redirect to ='/'/>
