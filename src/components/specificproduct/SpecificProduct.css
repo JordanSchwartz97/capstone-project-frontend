@@ -1,0 +1,50 @@
+.sp-container{
+    position: relative;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 800px;
+    background-color: white;
+    border: black 1px solid;
+}
+.preview-pic{
+    left: 150px;
+    top: 200px;
+    position: relative;
+    border: black 1px solid;
+    width: 400px;
+    height: 400px;
+}
+.product-image{
+    height: 400px;
+    width: 400px;
+}
+.details{
+    position: relative;
+    left: 600px;
+    bottom: 200px;
+    height: 400px;
+    width: 400px;
+    border: black 1px solid; 
+}
+
+.rating{
+    position: relative;
+    
+}
+.star{
+    color: orange;
+    position: relative;
+}
+.product-description{
+    padding-top: 10px;
+}
+.product-price{
+    padding-top: 55px;
+}
+.individual-add-to-cart-btn{
+        top: 260px;
+        position: absolute;
+        background-color: #00ABE7 !important;
+        border: white !important;
+}

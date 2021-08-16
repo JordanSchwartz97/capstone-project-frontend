@@ -12,7 +12,7 @@ export default function contactPage() {
           <img src={logo} alt='tech-x logo'></img>
         </div>
         <form method='post'>
-          <h3>Have questions?Drop us a message.</h3>
+          <h3>Have questions? Drop us a message.</h3>
           <div className="row">
             <div className="col-md-6">
               <div className="form-group">

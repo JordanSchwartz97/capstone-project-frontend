@@ -23,10 +23,9 @@ export default function ProductsPage(props) {
                         <h5 className="card-title">{name.productName} ${name.productPrice}</h5>
                         <img className="card-img-top" src="" alt="Card image cap"></img>
                         <p className="card-text">{name.productDescription}
-                        <a href="" className="btn info-button btn-link" >More Info</a>
+                        <a href="/moreinfo" className="btn info-button btn-link" >More Info</a>
                         </p>
-                        <a href="#" className="btn card-btn add-to-cart-btn btn-primary" onClick={() => addToCart(name._id)}>Add to cart</a>
-                        
+                        <a href="/product" className="btn card-btn add-to-cart-btn btn-primary" onClick={() => addToCart(name._id)}>Add to cart</a>  
                     </div>
                 </div>
             ))

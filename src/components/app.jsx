@@ -12,6 +12,7 @@ import ProfilePage from './profile/profilePage';
 import PrivateRoute from './privateRoute/PrivateRoute';
 import CouponPage from './couponpage/CouponPage';
 import contactPage from './contactpage/contactPage';
+import SpecificProduct from './specificproduct/SpecificProduct';
  const AppHooks = () => {
 
     let [user, setUser] = useState({});
@@ -67,6 +68,7 @@ import contactPage from './contactpage/contactPage';
                 <PrivateRoute path ="/contact" component={contactPage}/>
                 <PrivateRoute path ="/profile" component={(props) => <ProfilePage {...props} user={user}/>}/> 
                 <PrivateRoute path ="/coupons" component={(props) => <CouponPage {...props} user={user} />}/>
+                <PrivateRoute path ="/moreinfo" component={(props) => <SpecificProduct {...props} user={user} products={products} />}/>
                
                 
                 <Redirect to ='/'/>
