@@ -1,0 +1,6 @@
+.reviews-container{
+    background-color: white;
+   position: relative;
+   top: 1000px;
+   overflow-y: auto;
+}

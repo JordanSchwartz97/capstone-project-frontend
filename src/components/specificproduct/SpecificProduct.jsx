@@ -3,11 +3,12 @@ import keyboard from './download.jpg';
 import './SpecificProduct.css'
 import Navbar from '../navbar/navbar';
 import {BsFillStarFill} from "react-icons/bs"
+import Reviews from '../allproducts/reviews/Reviews';
 export default function SpecificProduct(props) {
     return (
         <>
         <Navbar/>
-        
+        <Reviews/>
         <div className="sp-container">
             <div className="sp-card">
                 <div className="sp-container-fluid">

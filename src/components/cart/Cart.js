@@ -38,7 +38,7 @@ export default function Cart(props) {
                         </button>
                     </div>
                     <div className="total-price">Total: $549</div>
-                    <a href="#" className="btn card-btn btn-primary" >Checkout</a>
+                    <a href="/checkout" className="btn card-btn btn-primary" >Checkout</a>
                 </div>
             </div>
         </div>

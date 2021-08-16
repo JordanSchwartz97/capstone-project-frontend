@@ -4,6 +4,7 @@ import Navbar from '../navbar/navbar'
 import './productsPage.css'
 import productImage from './download.jpg'
 import Cart from '../cart/Cart'
+
 export default function ProductsPage(props) {
     console.log(props.products)
     console.log(props.user)

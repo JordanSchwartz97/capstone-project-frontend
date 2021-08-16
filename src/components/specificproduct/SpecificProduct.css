@@ -3,7 +3,9 @@
     width: 40%;
     margin-left: 30%;
     margin-right: 30%;
+    bottom: 300px;
     height: 800px;
+    
     background-color: white;
     border: black 1px solid;
 }

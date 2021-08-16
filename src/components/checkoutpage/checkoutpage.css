@@ -1,0 +1,11 @@
+.checkout-container{
+    background-color: white;
+    height: 800px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#buttons-container{
+    position: relative;
+    left: 2200px !important;
+}
