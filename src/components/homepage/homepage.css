@@ -1,15 +1,17 @@
-.card{
-   position: relative;
-   max-height: 300px;
+
+.mask{
+    background-color: rgb(255, 255, 255);
 }
-.card-img-top{
-    position: relative;
-    max-height: 1000px;
+.bg-image{
+    background-image: url('./jumbotron-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    
 }
-.h5{
-    color: red
+.jumbotron-text{
+    color: white;
 }
-.home-div{
-    max-height: 100%;
-    max-width: 100%;
+body{
+    background: -webkit-linear-gradient(bottom, #323e47, #2e3638);
 }

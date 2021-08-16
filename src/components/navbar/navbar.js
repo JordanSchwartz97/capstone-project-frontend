@@ -24,7 +24,10 @@ const Navbar = (props) => {
                  </Link>
                  <Link to = "/about">
                  </Link>
-                 <a className="nav-item nav-link" href="/about">About Tech-x</a>   
+                 <a className="nav-item nav-link" href="/coupons">Coupons</a>
+                 <Link to = "/coupons">
+                 </Link>
+                 <a className="nav-item nav-link" href="/contact">Contact Us</a>   
             </div>
         </div>
         <div className="navbar-right">

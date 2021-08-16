@@ -5,10 +5,13 @@ import {Switch, Route,Redirect} from 'react-router-dom';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import Navbar from './navbar/navbar';
-import aboutPage from './aboutpage/aboutPage';
+import aboutPage from './contactpage/contactPage';
 import ProductsPage from './allproducts/productsPage';
 import Homepage from './homepage/homepage';
 import ProfilePage from './profile/profilePage';
+import PrivateRoute from './privateRoute/PrivateRoute';
+import CouponPage from './couponpage/CouponPage';
+import contactPage from './contactpage/contactPage';
  const AppHooks = () => {
 
     let [user, setUser] = useState({});
@@ -59,10 +62,11 @@ import ProfilePage from './profile/profilePage';
             <Switch>
                 <Route path = "/" exact component ={LoginPage} />
                 <Route path = "/register" component ={RegisterPage}/>
-                <Route path = "/home" component= {Homepage}/>
-                <Route path ="/products" render={(props) => <ProductsPage {...props} user={user} products ={products}/>}/>
-                <Route path ="/about" component={aboutPage}/>
-                <Route path ="/profile" render={(props) => <ProfilePage {...props} user={user}/>}/>    
+                <PrivateRoute path = "/home" component= {Homepage}/>
+                {user && <PrivateRoute path ="/products" component={(props) => <ProductsPage {...props} user={user} products ={products}/>}/>}
+                <PrivateRoute path ="/contact" component={contactPage}/>
+                <PrivateRoute path ="/profile" component={(props) => <ProfilePage {...props} user={user}/>}/> 
+                <PrivateRoute path ="/coupons" component={(props) => <CouponPage {...props} user={user} />}/>
                
                 
                 <Redirect to ='/'/>

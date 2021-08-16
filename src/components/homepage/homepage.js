@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import Navbar from '../navbar/navbar'
-import news from './download.jpg'
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
 import './homepage.css';
@@ -9,23 +8,25 @@ import './homepage.css';
       
     
     return ( 
-<div className="home-div">
-           <Navbar/>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4"></hr>
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
+        <>
+        <Navbar/>
+        
+    <div className="p-5 text-center bg-image ">
+  <div classsName="mask">
+    <div className="d-flex justify-content-center align-items-center h-100">
+      <div classsName="text-white">
+        <h1 classsName="jumbotron-text">Tech-x sells the latest and greatest tech products currently on the market. Tech-x selects only the greatest products designed to make your life easier.</h1>
+        <h4 classsName="jumbotron-text">Use code 20OFF for 20% off your for</h4>
+        <a classsName="btn btn-outline-light btn-lg" href="/products" role="button">View Products</a>
+      </div>
     </div>
-    <div className="trending">
+  </div>
+</div>
          
-        </div>
+        
     
             
-</div>
+        </>
     )
 }
 export default Homepage

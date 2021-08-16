@@ -1,0 +1,17 @@
+.minus-btn{
+    max-width: 10px;
+    max-height: 10px;
+    display: inline-block;
+    Cursor: pointer;
+}
+.plus-btn{
+    max-width: 10px;
+    max-height: 10px;
+    display: inline-block;
+    Cursor: pointer;
+}
+.shopping-cart{
+    position: relative;
+    left: 85%;
+    
+}

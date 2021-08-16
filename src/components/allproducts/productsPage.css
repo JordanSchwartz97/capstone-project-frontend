@@ -1,0 +1,19 @@
+.products-container{
+    width: 80%;
+    position: relative;
+    margin-top: 50px;
+    
+
+}
+.card{
+    width: 20%;
+    height: 300px;
+    float: right;
+    margin-left: 20px;
+}
+.add-to-cart-btn{
+    top: 240px;
+    position: absolute;
+    background-color: #00ABE7 !important;
+    border: white !important;
+}
