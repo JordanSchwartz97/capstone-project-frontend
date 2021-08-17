@@ -5,7 +5,11 @@ const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM});
 
 
 
-export default function HandlePayment() {
+export default function HandlePayment(props) {
+    console.log(props,'this is handlepayment props')
+    const orderDetails = async() => {
+        
+    }
     const createOrder= (data, actions) => {
         return actions.order.create({
             purchase_units: [
@@ -21,7 +25,7 @@ export default function HandlePayment() {
         return actions.order.capture();
     }
     return (
-            <PayPalButton
+            <PayPalButton 
             createOrder={(data, actions) => createOrder(data, actions)}
             onApprove={(data, actions) => onApprove(data, actions)}
             />

@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import keyboard from './download.jpg';
 import './SpecificProduct.css'
 import Navbar from '../navbar/navbar';
 import {BsFillStarFill} from "react-icons/bs"
 import {BsStar} from "react-icons/bs"
 import Reviews from '../allproducts/reviews/Reviews';
-import Cart from '../cart/Cart'
+import tech from './tech-x.png';
 
 export default function SpecificProduct({product}) {
     console.log(product)
@@ -15,7 +14,7 @@ export default function SpecificProduct({product}) {
             <Reviews rating={review.rating} text={review.text}/>
         })}
         <Reviews rating="5" text="test" /> */}
-        <Cart/>
+    
         <div className="sp-container">
             <a href="/products">Back to Products.</a>
             <div className="sp-card">
@@ -23,7 +22,7 @@ export default function SpecificProduct({product}) {
                     <div className="wrapper-row">
                         <div className="preview col-md-6">
                             <div className="preview-pic">
-                                    <img className="product-image" src={keyboard}></img>
+                                    <img className="product-image" src={tech}></img>
                             </div>
                             <div className="details ">
                                 <h3 className="product-name">{product.productName}</h3>
