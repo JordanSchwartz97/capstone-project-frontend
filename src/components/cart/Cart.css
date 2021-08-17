@@ -11,7 +11,29 @@
     Cursor: pointer;
 }
 .shopping-cart{
-    position: relative;
-    left: 85%;
+    position: absolute;
+    left: 2100px;
+    bottom: 300px;
+    width: 400px;
+    height: 800px;
+    background-color: white;   
+}
+.cart-thumbnail{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+}
+.title div{
+    flex: 55;
+}
+.cart-item{
+    padding: 10px;
+    border: black 1px solid;
 }

@@ -1,7 +1,5 @@
 
-.mask{
-    background-color: rgb(255, 255, 255);
-}
+
 .bg-image{
     background-image: url('./jumbotron-image.jpg');
     background-repeat: no-repeat;
@@ -9,9 +7,15 @@
     height: 600px;
     
 }
-.jumbotron-text{
+#jumbotrontext{
     color: white;
 }
 body{
     background: -webkit-linear-gradient(bottom, #323e47, #2e3638);
+}
+.jumbotron-button{
+    top: 240px;
+    position: absolute;
+    background-color: #00ABE7 !important;
+    border: white !important;
 }

@@ -1,0 +1,17 @@
+.coupon-container{
+    background-color: white;
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    left: 25%;
+    border: 1px solid black;
+}
+.coupon-container-title{
+    border: 1px solid black;
+}
+
+
+
+.coupon-container-body{
+    color: black;
+}

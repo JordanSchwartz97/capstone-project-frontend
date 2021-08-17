@@ -10,16 +10,14 @@ export default function CheckoutPage() {
     return (
         <div>
             <Navbar/>
+            
             <div className="checkout-container">
+                <div className="paypal-button">
+                    <HandlePayment />   
+                </div>
                 
-                {checkout ? (
-                <HandlePayment />
-                ) : (
-                <button onClick={() =>{
-                setCheckout(true);
-                }}
-                ></button>
-                )}
+               
+                
             </div> 
         </div>
     )

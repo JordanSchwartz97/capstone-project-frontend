@@ -1,21 +1,33 @@
 import axios from 'axios'
-import React from 'react'
 import Navbar from '../navbar/navbar'
 import './productsPage.css'
 import productImage from './download.jpg'
 import Cart from '../cart/Cart'
+import React,{useState,useEffect} from 'react'
+import SpecificProduct from '../specificproduct/SpecificProduct'
 
 export default function ProductsPage(props) {
-    console.log(props.products)
-    console.log(props.user)
-    
-    const addToCart = async(name_id) => {
+    console.log(props)
+    let [activeProduct, SetActiveProduct] = useState({});
+    let [isActive, SetIsActive] = useState(false);
+    const addToCart = async(name_id) => { 
+         console.log(name_id)
         const response = await axios.post(`http://localhost:5000/api/collections/cart/${props.user._id}/${name_id}`)
+       
+    }
+    const specificProductInfo = (name) => {
+        console.log(name,'specificproductinfo')
+        SetActiveProduct(name)
+        SetIsActive(true);
     }
     return (
         <>
             <Navbar/>
-            <Cart/>
+            
+                {isActive ? <SpecificProduct product={activeProduct}  /> 
+                :  
+                <>
+            <Cart user={props.user}/>
             <div className="products-container">
             {props.products ?
             props.products.map((name) => (
@@ -24,15 +36,18 @@ export default function ProductsPage(props) {
                         <h5 className="card-title">{name.productName} ${name.productPrice}</h5>
                         <img className="card-img-top" src="" alt="Card image cap"></img>
                         <p className="card-text">{name.productDescription}
-                        <a href="/moreinfo" className="btn info-button btn-link" >More Info</a>
+                        <button href="/moreinfo" className="btn info-button btn-link" onClick={() => specificProductInfo(name)} >More Info</button>
                         </p>
-                        <a href="/product" className="btn card-btn add-to-cart-btn btn-primary" onClick={() => addToCart(name._id)}>Add to cart</a>  
+                        <button href="" className="btn card-btn add-to-cart-btn btn-primary" onClick={() => addToCart(name._id)}>Add to cart</button>  
                     </div>
                 </div>
             ))
             : <h5>No Products</h5>
             } 
+               
             </div>
+            </>
+            }
         </>
     )
 }

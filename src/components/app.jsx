@@ -69,7 +69,7 @@ import CheckoutPage from './checkoutpage/checkoutpage';
                 <PrivateRoute path ="/contact" component={contactPage}/>
                 <PrivateRoute path ="/profile" component={(props) => <ProfilePage {...props} user={user}/>}/> 
                 <PrivateRoute path ="/coupons" component={(props) => <CouponPage {...props} user={user} />}/>
-                <PrivateRoute path ="/moreinfo" component={(props) => <SpecificProduct {...props} user={user} products={products} />}/>
+                {/* <PrivateRoute path ="/moreinfo" component={(props) => <SpecificProduct {...props} user={user} products={products} />}/> */}
                 <PrivateRoute path="/checkout" component={CheckoutPage}/>
                 
                 <Redirect to ='/'/>
