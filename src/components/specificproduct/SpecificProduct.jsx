@@ -14,7 +14,7 @@ export default function SpecificProduct({product}) {
             <Reviews rating={review.rating} text={review.text}/>
         })}
         <Reviews rating="5" text="test" /> */}
-    
+        <Reviews/>
         <div className="sp-container">
             <a href="/products">Back to Products.</a>
             <div className="sp-card">

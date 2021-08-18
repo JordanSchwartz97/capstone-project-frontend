@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import Plus from "./plus.png"
 import Minus from "./minus.png"
 import './Cart.css'
@@ -6,13 +6,26 @@ import axios from 'axios'
 
 
 export default function Cart({user}) {
-    console.log(user, 'cart')
+    const [subtotal, setSubtotal] = useState(0);
+     console.log(user)
      const deleteProduct = async(id) => {
        const response = axios.delete(`http://localhost:5000/api/collections/cart/${user._id}/${id}`)
-        console.log(response)
-
      }
-
+     const subTotal = (user) => {
+         if(user){
+         let total = user.cart.productPrice.map(({price}) => total= total + price)  
+         setSubtotal(total)
+        }
+        else{
+            console.log('no total')
+        }
+     }
+     useEffect(() => {
+        subTotal();
+     });
+    
+     
+    
     return (
         
         <div className="shopping-cart">

@@ -31,7 +31,9 @@ const Navbar = (props) => {
             </div>
         </div>
         <div className="navbar-right">
-                
+                 <Link to = "/checkout">
+                     <a className="nav-item nav-bar-right" href="/checkout">Check Out</a>
+                 </Link>
                  <Link to = "/profile">
                  <a className="nav-item nav-bar-right" href="/profile">Profile</a>
                  </Link>

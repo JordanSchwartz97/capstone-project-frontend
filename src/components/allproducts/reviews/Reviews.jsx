@@ -5,10 +5,10 @@ import Typography from '@material-ui/core/Typography';
 import Box from "@material-ui/core/Box";
 
 export default function Reviews({rating, text}) {
-    
+    console.log(rating, text)
 
     const getUserData = async () => {
-        
+      
        
         
     }
@@ -17,7 +17,7 @@ export default function Reviews({rating, text}) {
             <div className="col-sm-6">
                 <div className="panel panel-default">
                     <div className="panel-heading">
-                        <h3 className="panel-title" name="name">Input Product Name placeholder</h3>
+                        <h3 className="panel-title" name="name"></h3>
                         <div className="stars">
                         <Box component="fieldset" mb={3} borderColor="transparent">
                             <Typography component="legend"></Typography>
