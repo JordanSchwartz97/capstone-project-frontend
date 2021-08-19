@@ -10,10 +10,13 @@ export default function ProductsPage(props) {
     console.log(props)
     let [activeProduct, SetActiveProduct] = useState({});
     let [isActive, SetIsActive] = useState(false);
+    let [total, SetTotal] = useState(0)
     const addToCart = async(name_id) => { 
          console.log(name_id)
         const response = await axios.post(`http://localhost:5000/api/collections/cart/${props.user._id}/${name_id}`)
-       
+        console.log(response.data)
+        total = total + response.data.productPrice
+        console.log(total)
     }
     const specificProductInfo = (name) => {
         console.log(name,'specificproductinfo')
@@ -27,7 +30,7 @@ export default function ProductsPage(props) {
                 {isActive ? <SpecificProduct product={activeProduct} user={props.user} /> 
                 :  
                 <>
-            <Cart user={props.user}/>
+             {props.user ? <Cart total= {total} user={props.user} products={props.products}/> : <div>No items in cart!</div>}
             <div className="products-container">
             {props.products ?
             props.products.map((name) => (

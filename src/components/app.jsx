@@ -14,6 +14,7 @@ import CouponPage from './couponpage/CouponPage';
 import contactPage from './contactpage/contactPage';
 import SpecificProduct from './specificproduct/SpecificProduct';
 import CheckoutPage from './checkoutpage/checkoutpage';
+import PaymentSuccessful from './paymentsuccesful/PaymentSuccessful';
  const AppHooks = () => {
 
     let [user, setUser] = useState({});
@@ -70,7 +71,7 @@ import CheckoutPage from './checkoutpage/checkoutpage';
                 <PrivateRoute path ="/profile" component={(props) => <ProfilePage {...props} user={user}/>}/> 
                 <PrivateRoute path ="/coupons" component={(props) => <CouponPage {...props} user={user} />}/>
                 <PrivateRoute path="/checkout" component={(props) => <CheckoutPage {...props} user={user} prodcucts= {products} />}/>
-                
+                <PrivateRoute path="/success" component={(props) => <PaymentSuccessful {...props} user={user} products={products}/>}/>
                 <Redirect to ='/'/>
             </Switch>
          </>       

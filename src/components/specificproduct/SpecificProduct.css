@@ -3,7 +3,7 @@
     width: 40%;
     margin-left: 30%;
     margin-right: 30%;
-    bottom: 300px;
+    bottom: 400px;
     height: 800px;
     
     background-color: white;
@@ -45,8 +45,12 @@
     padding-top: 55px;
 }
 .individual-add-to-cart-btn{
-        top: 260px;
-        position: absolute;
-        background-color: #00ABE7 !important;
-        border: white !important;
+    top: 260px;
+    position: absolute;
+    background-color: #00ABE7 !important;
+    border: white !important;
+}
+.review-form{
+    position: absolute;
+    top: 1200px;
 }

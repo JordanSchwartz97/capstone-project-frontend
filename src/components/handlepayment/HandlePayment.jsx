@@ -25,10 +25,13 @@ export default function HandlePayment(props) {
         return actions.order.capture();
     }
     return (
+        <>
             <PayPalButton 
+            
             createOrder={(data, actions) => createOrder(data, actions)}
             onApprove={(data, actions) => onApprove(data, actions)}
             />
+        </>
         
     );
 }

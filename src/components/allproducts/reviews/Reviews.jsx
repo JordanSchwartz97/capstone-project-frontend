@@ -5,13 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from "@material-ui/core/Box";
 
 export default function Reviews({rating, text}) {
-    console.log(rating, text)
+    console.log(rating, text,'this is reviews rating/text')
 
-    const getUserData = async () => {
-      
-       
-        
-    }
     return (
         <div className="reviews-container">
             <div className="col-sm-6">
