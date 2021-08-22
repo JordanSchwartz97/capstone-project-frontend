@@ -1,8 +1,8 @@
 .reviews-container{
     background-color: white;
-   position: relative;
-   top: 1000px;
-   overflow-y: auto;
+    position: relative;
+    top: 1000px;
+    overflow-y: auto;
 }
 .panel{
     border: 1px solid black;

@@ -7,7 +7,6 @@ import React,{useState,useEffect} from 'react'
 import SpecificProduct from '../specificproduct/SpecificProduct'
 
 export default function ProductsPage(props) {
-    console.log(props)
     let [activeProduct, SetActiveProduct] = useState({});
     let [isActive, SetIsActive] = useState(false);
     const addToCart = async(name_id) => { 
@@ -15,37 +14,35 @@ export default function ProductsPage(props) {
     }
     
     const specificProductInfo = (name) => {
-        console.log(name,'specificproductinfo')
         SetActiveProduct(name)
         SetIsActive(true);
     }
     return (
         <>
             <Navbar/>
-            
                 {isActive ? <SpecificProduct product={activeProduct} user={props.user} /> 
                 :  
                 <>
              {props.user ? <Cart user={props.user} products={props.products}/> : <div>No items in cart!</div>}
             <div className="products-container">
-            {props.products ?
-            props.products.map((name) => (
-                <div class="card"> 
-                    <div className="card-body">
-                        <h5 className="card-title">{name.productName} ${name.productPrice}</h5>
-                        <img className="card-img-top" src="" alt="Card image cap"></img>
-                        <p className="card-text">{name.productDescription}
-                        <button href="/moreinfo" className="btn info-button btn-link" onClick={() => specificProductInfo(name)} >More Info</button>
-                        </p>
-                        <button href="" className="btn card-btn add-to-cart-btn btn-primary" onClick={() => addToCart(name._id)}>Add to cart</button>  
+                {props.products ?
+                props.products.map((name) => (
+                    <div class="card"> 
+                        <div className="card-body">
+                            <h5 className="card-title">{name.productName} ${name.productPrice}</h5>
+                            <img className="card-img-top" src="" alt="Card image cap"></img>
+                            <p className="card-text">{name.productDescription}
+                            <button href="/moreinfo" className="btn info-button btn-link" onClick={() => specificProductInfo(name)} >More Info</button>
+                            </p>
+                            <button href="" className="btn card-btn add-to-cart-btn btn-primary" onClick={() => addToCart(name._id)}>Add to cart</button>  
+                        </div>
                     </div>
-                </div>
-            ))
-            : <h5>No Products</h5>
-            } 
+                ))
+                : <h5>No Products</h5>
+                } 
                
-            </div>
-            </>
+                </div>
+                </>
             }
         </>
     )

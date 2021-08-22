@@ -5,14 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import Box from "@material-ui/core/Box";
 
 export default function Reviews(props) {
-    console.log(props,'this is reviews rating/text')
+    
 
     return (
         
         <div className="reviews-container">
             <div className="col-sm-6">
                 {props.product.productReview.map(review => (
-
                 <div className="panel panel-default">
                     <div className="panel-heading">
                         <h3 className="panel-title" name="name"></h3>
@@ -24,16 +23,12 @@ export default function Reviews(props) {
                         </div>
                     </div>
                     <div className="panel-body" name="reviewBody">
-                       <p>{review.text}</p>
-                        
+                        <p>{review.text}</p>
                         <span name="author"></span>  
                     </div>
-                    
-
                 </div>
                 ))}
             </div>
-
         </div>
     )
 }

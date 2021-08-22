@@ -1,17 +1,46 @@
 .coupon-container{
     background-color: white;
-    height: 800px;
+    height: 1000px;
     width: 1200px;
     position: relative;
-    left: 25%;
+    margin-left: 25%;
+    margin-right: 25%;
     border: 1px solid black;
+    
 }
 .coupon-container-title{
     border: 1px solid black;
+    text-align: center;
 }
 
 
 
 .coupon-container-body{
     color: black;
+    
 }
+.coupon {
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 80%;
+    border-radius: 15px; /* Rounded border */
+    margin-top: 20px;
+    max-width: 300px;
+    max-height: 300px;
+    display: inline-block;
+    margin-left: 60px;
+    
+  }
+  
+  .coupon-container {
+    padding: 2px 16px;
+    background-color: #f1f1f1;
+  }
+  
+  .promo {
+    background: #ccc;
+    padding: 3px;
+  }
+  
+  .expire {
+    color: red;
+  }

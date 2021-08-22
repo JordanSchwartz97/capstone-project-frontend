@@ -11,18 +11,18 @@ export default function contactPage() {
         <div className="contact-image">
           <img src={logo} alt='tech-x logo'></img>
         </div>
-        <form method='post'>
+        <form action="mailto:capstone822@gmail.com" method='post' enctype="text/plain">
           <h3>Have questions? Drop us a message.</h3>
           <div className="row">
             <div className="col-md-6">
               <div className="form-group">
-                <input type="text" name="txtName" className="form-control" placeholder="Your Name *" value=""/>
+                <input type="text" name="Name" className="form-control" placeholder="Your Name *" ></input>
               </div>
               <div className="form-group">
-                <input type="text" name="txtEmail" className="form-control" placeholder="Your Email *" value=""/>
+                <input type="text" name="Email" className="form-control" placeholder="Your Email *" ></input>
               </div>
               <div className="form-group">
-                <textarea name="txtMsg" className="form-control txt-msg" placeholder='Your message *'></textarea>
+                <textarea name="Message" className="form-control txt-msg" placeholder='Your message *'></textarea>
               </div>
               <div className="form-group">
                 <input type="submit" name="btnSubmit" className="btnContactSubmit" value="Send Message"/>

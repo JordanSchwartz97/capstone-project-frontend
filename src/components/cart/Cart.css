@@ -1,27 +1,16 @@
-.minus-btn{
-    max-width: 10px;
-    max-height: 10px;
-    display: inline-block;
-    Cursor: pointer;
-}
-.plus-btn{
-    max-width: 10px;
-    max-height: 10px;
-    display: inline-block;
-    Cursor: pointer;
-}
+
 .shopping-cart{
     position: absolute;
     left: 2100px;
-    bottom: 300px;
+    bottom: 400px;
     width: 400px;
     height: 800px;
     background-color: white;   
 }
 .cart-thumbnail{
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
 }
 .title{
     display: flex;
@@ -36,5 +25,14 @@
 .cart-item{
     padding-top: 10px;
     padding-left: 25px;
+    width: 90%;
+    margin-top: 10px;
     border: black 1px solid;
+}
+.side-cart-btn{
+    margin-bottom: 5px;
+}
+.checkout-btn{
+    background-color: #00ABE7 !important;
+    border: white !important;
 }

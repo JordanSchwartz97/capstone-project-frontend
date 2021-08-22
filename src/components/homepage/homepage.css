@@ -5,6 +5,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     
 }
 #jumbotrontext{
@@ -14,8 +17,9 @@ body{
     background: -webkit-linear-gradient(bottom, #323e47, #2e3638);
 }
 .jumbotron-button{
-    top: 240px;
-    position: absolute;
+
+    position: relative;
     background-color: #00ABE7 !important;
     border: white !important;
+    
 }

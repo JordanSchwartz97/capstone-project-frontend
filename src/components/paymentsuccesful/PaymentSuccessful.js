@@ -13,7 +13,6 @@ export default function PaymentSuccessful(props) {
             <div className="payment-successful-body">
                 <h5>Your payment has been completed. Please check your email for order details.</h5>
                 <a href="/home" className="btn card-btn payment-successful-btn btn-primary">Home</a>
-                <a href="/home" className="btn card-btn payment-successful-btn btn-primary">Reciept</a>
             </div>
         </div>
         </>
