@@ -2,6 +2,7 @@ import axios from 'axios'
 import Navbar from '../navbar/navbar'
 import logo from './tech-x.png'
 import React, { useState,useEffect } from 'react';
+import './profilePage.css'
 
 
     function ProfilePage(props) {
@@ -50,7 +51,7 @@ import React, { useState,useEffect } from 'react';
                     </div>
                 </div>
                 <div id="submit-info">
-            <div className="container">
+            <div className="submit-info-container">
                 <div id="submit-row" className="row justify-content-center align-items-center">
                     <div id="submit-column" className="col-md-6">
                         <div id="submit-form" className="form" action="" method="post">
@@ -83,7 +84,7 @@ import React, { useState,useEffect } from 'react';
                             {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
 
                             <div className="form-group">
-                                <input type="button" value='Submit' className="leftButton" onClick={updateUserInfo}  /> 
+                                <input type="button" value='Submit' className="btn submit-info-btn btn-primary" onClick={updateUserInfo}  /> 
                             </div>
 
                         </div>

@@ -5,31 +5,48 @@ import {BsFillStarFill} from "react-icons/bs"
 import {BsStar} from "react-icons/bs"
 import Reviews from '../allproducts/reviews/Reviews';
 import tech from './tech-x.png';
+import axios from 'axios';
 
-export default function SpecificProduct({product}) {
-    console.log(product)
+export default function SpecificProduct({product, total,user}) {
+    const usertext = useFormInput('');
+    const userrating = useFormInput('');
+    
+    const addReview = async(product_id) => {
+         const review = { text: usertext.value,
+                         rating: userrating.value}
+        console.log(review)
+       const response = await axios.put(`http://localhost:5000/api/collections/products/reviews/${product_id}`, review)
+       console.log(response)
+       alert('Your review has been submitted!')
+   }
+    
+    const addToCart = async(name_id) => { 
+        console.log(name_id)
+       const response = await axios.post(`http://localhost:5000/api/collections/cart/${user._id}/${name_id}`)
+       console.log(response.data)
+       total = total + response.data.productPrice
+       console.log(total)
+   }
+   
     return (
         <>
             <form className="review-form">
-                <div className="form-group ">
-                <label for="exampleFormControlSelect1">Rating</label>
-                <select className="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                </select>
-            </div>
-            <div className="form-group review-text">
-                <label for="exampleFormControlTextarea1">Review Text</label>
-                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
+                <h5 classname="review-header">Add A review!</h5>
+                <div className="form-group">                    
+                    <label for="rating">Rating: Please enter a value from 1-5 stars.</label>
+                    <input type="text" {...userrating} name="rating" autoComplete="new-rating"></input>  
+                </div>
+                <div className="form-group review-text">
+                    <label for="review-text">Text:</label>
+                    <textarea type="text" {...usertext} className="text-area-review-box" name="review-text" autoComplete="review-text"></textarea>
+                </div> 
+                <a className="btn card-btn submit-review-btn btn-primary" onClick={() => addReview(product._id)}>Submit Review</a>
             </form>
-
-        {product.productReview.map(review => (
+            
+        {/* {product.productReview.map(review => (
             <Reviews rating={review.rating} text={review.text}/>
-        ))}
+        ))} */}
+        <Reviews product={product}/>
         <div className="sp-container">
             <a href="/products">Back to Products.</a>
             <div className="sp-card">
@@ -54,7 +71,7 @@ export default function SpecificProduct({product}) {
                             <p className="product-description">{product.productDescription}</p>
                             <h4 className="product-price"><span>Current Price: ${product.productPrice}</span></h4>
                             <div className="action">
-                            <a href="#" className="btn card-btn individual-add-to-cart-btn btn-primary " onClick="">Add to cart</a>
+                            <a href="#" className="btn card-btn individual-add-to-cart-btn btn-primary " onClick={() => addToCart(product._id)}>Add to cart</a>
                             </div>
 
                             </div>
@@ -67,4 +84,16 @@ export default function SpecificProduct({product}) {
 
         </>
     )
+
 }
+const useFormInput = initialValue => {
+    const [value, setValue] = useState(initialValue);
+  
+    const handleChange = e => {
+      setValue(e.target.value);
+    }
+    return {
+      value,
+      onChange: handleChange
+    }
+  }

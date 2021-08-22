@@ -51,6 +51,31 @@
     border: white !important;
 }
 .review-form{
+    position: relative;
+    top: 900px;
+    background-color: white;
+    height: 250px;
+    border: 1px solid black;
+    margin-left: 20%;
+    margin-right: 20%
+}
+.review-text{
+    width: 60%;
+    height: 50px;
+    margin-top: 20px;
+}
+.star-review{
+ position: relative;
+ width: 20%;
+ margin-top: 20px;
+}
+.submit-review-btn{
     position: absolute;
-    top: 1200px;
+    background-color: #00ABE7 !important;
+    border: white !important;
+    margin-top: 40px;
+}
+.text-area-review-box{
+    width: 100%;
+    margin-top: 10px;
 }

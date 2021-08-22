@@ -6,31 +6,15 @@ import axios from 'axios'
 
 
 
-export default function Cart({user, total, products}) {
-    const [subtotal, setSubtotal] = useState(0);
+export default function Cart({user}) {
+
     
-     console.log(total)
+     console.log(user)
      const deleteProduct = async(name) => {
        let response = axios.delete(`http://localhost:5000/api/collections/cart/${user._id}/${name._id}`)
-        console.log(name)
-        total = total - name.productPrice
-       console.log(total)
      }
-    //  const subTotal = (user) => {
-    //      console.log(user)
-    //      if(true){
-    //      let total =  user.cart.map(({item}) => total= total + item.productPrice)  
-    //      setSubtotal(total)
-    //     }
-    //     else{
-    //         console.log('no total')
-    //     }
-    //  }
-    //  useEffect(() => {
-    //      console.log(user,'pp')
-    //     subTotal(user);
-    //  },[setSubtotal]);
-    
+
+  
      
     
     return (
