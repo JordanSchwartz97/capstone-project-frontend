@@ -25,7 +25,7 @@ import './profilePage.css'
                 username: username.value,
                 userpassword: userpassword.value
             }
-           
+            console.log(props.user._id);
             const response = await axios.put(`http://localhost:5000/api/collections/users/${props.user._id}`, editUser)
             console.log(response)
         }

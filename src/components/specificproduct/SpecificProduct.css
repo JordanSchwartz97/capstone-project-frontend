@@ -57,7 +57,9 @@
     height: 250px;
     border: 1px solid black;
     margin-left: 20%;
-    margin-right: 20%
+    margin-right: 20%;
+    padding-left: 50px;
+    padding-top: 20px;
 }
 .review-text{
     width: 60%;

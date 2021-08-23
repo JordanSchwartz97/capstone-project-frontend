@@ -32,7 +32,7 @@ export default function SpecificProduct({product, total,user}) {
         <>
             <form className="review-form">
                 <h5 classname="review-header">Add A review!</h5>
-                <div className="form-group">                    
+                <div className="form-group input-review">                    
                     <label for="rating">Rating: Please enter a value from 1-5 stars.</label>
                     <input type="text" {...userrating} name="rating" autoComplete="new-rating"></input>  
                 </div>
