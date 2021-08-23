@@ -8,10 +8,14 @@
     float: right;
     margin-left: 20px;
     margin-top: 50px;
+
 }
 .add-to-cart-btn{
     top: 240px;
     position: absolute;
     background-color: #00ABE7 !important;
     border: white !important;
+}
+.card-title{
+    border-bottom: 1px solid black;
 }

@@ -30,7 +30,6 @@ export default function ProductsPage(props) {
                     <div class="card"> 
                         <div className="card-body">
                             <h5 className="card-title">{name.productName} ${name.productPrice}</h5>
-                            <img className="card-img-top" src="" alt="Card image cap"></img>
                             <p className="card-text">{name.productDescription}
                             <button href="/moreinfo" className="btn info-button btn-link" onClick={() => specificProductInfo(name)} >More Info</button>
                             </p>
