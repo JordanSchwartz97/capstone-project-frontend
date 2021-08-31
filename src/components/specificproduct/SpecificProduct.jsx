@@ -63,7 +63,7 @@ export default function SpecificProduct({product, total,user}) {
                                     <img className="product-image" src={tech}></img>
                             </div>
                             <div className="details ">
-                                <h3 className="product-name">{product.productName}</h3>
+                                <h3 className="product-name">{product.productName} - ${product.productPrice}</h3>
                             <div className="rating">
                                 <div className="stars">
                                     <span className="star"><BsFillStarFill/></span>
@@ -75,7 +75,7 @@ export default function SpecificProduct({product, total,user}) {
                                 <span className="review-no">{product.productReview.length} reviews</span>
                             </div>
                             <p className="product-description">{product.productDescription}</p>
-                            <h4 className="product-price"><span>Current Price: ${product.productPrice}</span></h4>
+                            
                             <div className="action">
                             <a href="#" className="btn card-btn individual-add-to-cart-btn btn-primary " onClick={() => addToCart(product._id)}>Add to cart</a>
                             </div>

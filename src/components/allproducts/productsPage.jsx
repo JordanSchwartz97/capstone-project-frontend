@@ -11,6 +11,7 @@ export default function ProductsPage(props) {
     let [isActive, SetIsActive] = useState(false);
     const addToCart = async(name_id) => { 
         const response = await axios.post(`http://localhost:5000/api/collections/cart/${props.user._id}/${name_id}`)
+        alert("Item has been added to your cart!")
     }
     
     const specificProductInfo = (name) => {

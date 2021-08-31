@@ -11,6 +11,7 @@ export default function CheckoutPage(props) {
     const deleteProduct = async(id) => {
         const response = await axios.delete(`http://localhost:5000/api/collections/cart/${props.user._id}/${id}`)
          console.log(response)
+         alert(`Item has been removed from your cart!`)
  
       }
     return (
