@@ -20,7 +20,7 @@ export default function ProductsPage(props) {
     return (
         <>
             <Navbar/>
-                {isActive ? <SpecificProduct product={activeProduct} user={props.user} /> 
+                {isActive ? <SpecificProduct product={activeProduct} user={props.user}/> 
                 :  
                 <>
              {props.user ? <Cart user={props.user} products={props.products}/> : <div>No items in cart!</div>}

@@ -9,7 +9,7 @@ export default function CheckoutPage(props) {
     const [checkout, setCheckout] = useState(false);
 
     const deleteProduct = async(id) => {
-        const response = axios.delete(`http://localhost:5000/api/collections/cart/${props.user._id}/`)
+        const response = await axios.delete(`http://localhost:5000/api/collections/cart/${props.user._id}/${id}`)
          console.log(response)
  
       }
