@@ -26,6 +26,7 @@ export default function SpecificProduct({product, total,user}) {
         console.log(name_id)
        const response = await axios.post(`http://localhost:5000/api/collections/cart/${user._id}/${name_id}`)
        console.log(response.data)
+       alert("Item has been added to your cart!")
        total = total + response.data.productPrice
        console.log(total)
    }

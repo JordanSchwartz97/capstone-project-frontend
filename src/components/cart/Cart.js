@@ -7,6 +7,7 @@ import axios from 'axios'
 export default function Cart({user}) {
      const deleteProduct = async(name) => {
        let response = axios.delete(`http://localhost:5000/api/collections/cart/${user._id}/${name._id}`)
+       alert("Item has been removed from your cart!")
      }
 
     return (
