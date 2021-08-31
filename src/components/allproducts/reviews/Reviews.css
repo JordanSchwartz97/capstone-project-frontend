@@ -1,7 +1,7 @@
 .reviews-container{
     background-color: white;
     position: relative;
-    top: 1000px;
+    top: 900px;
     overflow-y: auto;
     width: 60%;
     margin-left: 20%;
@@ -12,4 +12,8 @@
     margin-left: 20%;
     width: 1200px;
     margin-top: 20px;
+}
+.reviews-container-title{
+    border-bottom: 2px solid black;
+    text-align: center;
 }

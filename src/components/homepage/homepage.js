@@ -22,7 +22,13 @@ import './homepage.css';
             </div>
           </div>
         </div>
-         
+        <div className="p-5 text-center home-info-container">
+          <div className="home-title-container">
+          </div>
+          <div className="home-body-container">
+            
+          </div>
+        </div>
   
         
     

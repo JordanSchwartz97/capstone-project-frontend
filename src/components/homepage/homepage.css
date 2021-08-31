@@ -23,3 +23,10 @@ body{
     border: white !important;
     
 }
+.home-info-container{
+    width: 90%;
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 600px;
+}

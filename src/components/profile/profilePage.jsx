@@ -55,7 +55,7 @@ import './profilePage.css'
                 <div id="submit-row" className="row justify-content-center align-items-center">
                     <div id="submit-column" className="col-md-6">
                         <div id="submit-form" className="form" action="" method="post">
-                            <h3 className="text-center text">Update about me</h3>
+                            <h3 className="text-center text">Update Personal Info</h3>
                             <div className="form-group">
                                 <label for="first-name" className="text">First Name:</label>
                                 <input type="text" {...userfirstName}  name="first-name" className="form-control" autoComplete="new-first-name"></input>

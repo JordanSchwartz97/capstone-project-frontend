@@ -10,10 +10,12 @@ import axios from 'axios';
 export default function SpecificProduct({product, total,user}) {
     const usertext = useFormInput('');
     const userrating = useFormInput('');
+    const usertitle = useFormInput('');
     
     const addReview = async(product_id) => {
          const review = { text: usertext.value,
-                         rating: userrating.value}
+                         rating: userrating.value,
+                         title: usertitle.value}
         console.log(review)
        const response = await axios.put(`http://localhost:5000/api/collections/products/reviews/${product_id}`, review)
        console.log(response)
@@ -32,6 +34,10 @@ export default function SpecificProduct({product, total,user}) {
         <>
             <form className="review-form">
                 <h5 classname="review-header">Add A review!</h5>
+                <div className="form-group review-title">
+                    <label for="review-title">Title: Please enter a title for your review.</label>
+                    <input className="title-input-box" type="text" {...usertitle} name="title" autoComplete="review-title"></input>
+                </div>
                 <div className="form-group input-review">                    
                     <label for="rating">Rating: Please enter a value from 1-5 stars.</label>
                     <input type="text" {...userrating} name="rating" autoComplete="new-rating"></input>  

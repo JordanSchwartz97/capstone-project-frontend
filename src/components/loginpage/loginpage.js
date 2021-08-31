@@ -41,7 +41,7 @@ function LoginPage(props) {
   
     return (
         <div id="login">
-            <h3 className="text-center text-white pt-5">Login Form</h3>
+            <h3 className="text-center text-white pt-5"></h3>
             <div className="container">
                 <div id="login-row" className="row justify-content-center align-items-center">
                     <div id="login-column" className="col-md-6">

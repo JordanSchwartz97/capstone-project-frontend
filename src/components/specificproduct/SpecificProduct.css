@@ -54,8 +54,8 @@
     position: relative;
     top: 900px;
     background-color: white;
-    height: 250px;
-    border: 1px solid black;
+    height: 300px;
+    border-bottom: 2px solid black;
     margin-left: 20%;
     margin-right: 20%;
     padding-left: 50px;
@@ -80,4 +80,10 @@
 .text-area-review-box{
     width: 100%;
     margin-top: 10px;
+}
+.input-review{
+    margin-top: 20px;
+}
+.title-input-box{
+    width: 300px;
 }
