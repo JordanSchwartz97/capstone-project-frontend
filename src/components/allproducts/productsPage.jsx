@@ -9,9 +9,14 @@ import SpecificProduct from '../specificproduct/SpecificProduct'
 export default function ProductsPage(props) {
     let [activeProduct, SetActiveProduct] = useState({});
     let [isActive, SetIsActive] = useState(false);
+    let [total, setTotal] = useState(0)
+    
     const addToCart = async(name_id) => { 
         const response = await axios.post(`http://localhost:5000/api/collections/cart/${props.user._id}/${name_id}`)
         alert("Item has been added to your cart!")
+        console.log(response)
+        setTotal(total + response.data.productPrice)
+        console.log(total)
     }
     
     const specificProductInfo = (name) => {
